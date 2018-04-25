@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraitreLame", "TraitreLame\TraitreLame.csproj", "{E8EE40D8-0EEC-429B-A122-3BDA513FA56B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8EE40D8-0EEC-429B-A122-3BDA513FA56B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8EE40D8-0EEC-429B-A122-3BDA513FA56B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8EE40D8-0EEC-429B-A122-3BDA513FA56B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8EE40D8-0EEC-429B-A122-3BDA513FA56B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1298C19F-B7B4-4167-942C-0754CD69A31F}
+	EndGlobalSection
+EndGlobal

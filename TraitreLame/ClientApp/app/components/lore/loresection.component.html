@@ -1,0 +1,32 @@
+﻿<!-- Load only one title depending on depth -->
+<h1 *ngIf="depth==0">{{lore.title}}</h1>
+<h2 *ngIf="depth==1">{{lore.title}}</h2>
+<h3 *ngIf="depth==2">{{lore.title}}</h3>
+<h4 *ngIf="depth==3">{{lore.title}}</h4>
+<h5 *ngIf="depth==4">{{lore.title}}</h5>
+<h6 *ngIf="depth>=5">{{lore.title}}</h6>
+
+<div *ngIf="isDefined(lore.description)">
+    <div *ngIf="isString(lore.description)">
+        {{lore.description}}
+    </div>
+
+    <div *ngIf="!isString(lore.description) && isArray(lore.description)">
+        <div *ngFor="let element of lore.description">
+            <div *ngIf="isString(element)">{{element}}</div>
+            <ul *ngIf="!isString(element) && isArray(element)">
+                <li *ngFor="let sub of element">
+                    <div *ngIf="isString(sub)">{{sub}}</div>
+                    <ul *ngIf="!isString(sub) && isArray(sub)">
+                        <li *ngFor="let str of sub">{{str}}</li>
+                    </ul>
+                </li>
+            </ul>
+            <div *ngIf="!isString(element) && !isArray(element) && isMedia(element)">TODO MEDIA TYPE</div>
+        </div>
+    </div>
+</div>
+
+<div *ngFor="let section of lore.section">
+    <lore-section [lore]="section" [depth]="depth + 1"></lore-section>
+</div>
