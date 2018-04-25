@@ -3,5 +3,5 @@
 <p *ngIf="!loreRoot"><em>Chargement...</em></p>
 
 <div *ngIf="!!loreRoot">
-    <lore-section *ngFor="let element of loreRoot.lore" [lore]="element" [depth]="0"></lore-section>
+    <dynamic-section *ngFor="let element of loreRoot.lore" [section]="element" [depth]="0"></dynamic-section>
 </div>

@@ -15,3 +15,7 @@ export class LoreComponent {
         }, error => console.error(error));
     }
 }
+
+interface LoreRoot {
+    lore: Section[];
+}

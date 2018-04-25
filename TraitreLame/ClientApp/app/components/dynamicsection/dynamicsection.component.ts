@@ -1,12 +1,12 @@
 ﻿import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'lore-section',
-    templateUrl: './loresection.component.html'
+    selector: 'dynamic-section',
+    templateUrl: './dynamicsection.component.html'
 })
-export class LoreSectionComponent {
+export class DynamicSectionComponent {
     @Input()
-    public lore: Lore;
+    public section: Section;
 
     @Input()
     public depth: number;

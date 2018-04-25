@@ -10,7 +10,8 @@ import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CharacterComponent } from './components/character/character.component';
 import { LoreComponent } from './components/lore/lore.component';
-import { LoreSectionComponent } from './components/lore/loresection.component';
+import { ManualComponent } from './components/manual/manual.component';
+import { DynamicSectionComponent } from './components/dynamicsection/dynamicsection.component';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import { LoreSectionComponent } from './components/lore/loresection.component';
         FetchDataComponent,
         HomeComponent,
         LoreComponent,
-        LoreSectionComponent
+        DynamicSectionComponent,
+        ManualComponent
     ],
     imports: [
         CommonModule,
@@ -32,6 +34,7 @@ import { LoreSectionComponent } from './components/lore/loresection.component';
             { path: 'character', component: CharacterComponent },
             { path: 'fetch-data', component: FetchDataComponent },
             { path: 'lore', component: LoreComponent },
+            { path: 'manual', component: ManualComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ]

@@ -1,0 +1,32 @@
+﻿<!-- Load only one title depending on depth -->
+<h1 *ngIf="depth==0">{{section.title}}</h1>
+<h2 *ngIf="depth==1">{{section.title}}</h2>
+<h3 *ngIf="depth==2">{{section.title}}</h3>
+<h4 *ngIf="depth==3">{{section.title}}</h4>
+<h5 *ngIf="depth==4">{{section.title}}</h5>
+<h6 *ngIf="depth>=5">{{section.title}}</h6>
+
+<div *ngIf="isDefined(section.description)">
+    <div *ngIf="isString(section.description)">
+        {{section.description}}
+    </div>
+
+    <div *ngIf="!isString(section.description) && isArray(section.description)">
+        <div *ngFor="let element of section.description">
+            <div *ngIf="isString(element)">{{element}}</div>
+            <ul *ngIf="!isString(element) && isArray(element)">
+                <li *ngFor="let sub of element">
+                    <div *ngIf="isString(sub)">{{sub}}</div>
+                    <ul *ngIf="!isString(sub) && isArray(sub)">
+                        <li *ngFor="let str of sub">{{str}}</li>
+                    </ul>
+                </li>
+            </ul>
+            <div *ngIf="!isString(element) && !isArray(element) && isMedia(element)">TODO MEDIA TYPE</div>
+        </div>
+    </div>
+</div>
+
+<div *ngFor="let section of section.section">
+    <dynamic-section [section]="section" [depth]="depth + 1"></dynamic-section>
+</div>

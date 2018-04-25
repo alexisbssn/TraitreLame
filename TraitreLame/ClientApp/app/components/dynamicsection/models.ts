@@ -1,14 +1,10 @@
-﻿interface Lore {
+﻿interface Section {
     title: string;
     description: any[]; // sometimes string, sometimes string[], sometimes Media
-    section: Lore[];
+    section: Section[];
 }
 
 interface Media {
     type: string;
     src: string;
-}
-
-interface LoreRoot {
-    lore: Lore[];
 }

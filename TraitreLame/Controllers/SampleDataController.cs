@@ -39,6 +39,12 @@ namespace TraitreLame.Controllers
             return Ok(Lore.GetLore());
         }
 
+        [HttpGet("[action]")]
+        public IActionResult GenerateManual()
+        {
+            return Ok(Manual.GetManual());
+        }
+
         public class WeatherForecast
         {
             public string DateFormatted { get; set; }
