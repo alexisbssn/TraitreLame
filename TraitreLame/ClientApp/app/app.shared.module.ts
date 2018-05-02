@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+
 import { AppComponent } from './components/app/app.component';
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
@@ -36,7 +38,8 @@ import { DynamicSectionComponent } from './components/dynamicsection/dynamicsect
             { path: 'lore', component: LoreComponent },
             { path: 'manual', component: ManualComponent },
             { path: '**', redirectTo: 'home' }
-        ])
+        ]),
+        ScrollToModule.forRoot()
     ]
 })
 export class AppModuleShared {

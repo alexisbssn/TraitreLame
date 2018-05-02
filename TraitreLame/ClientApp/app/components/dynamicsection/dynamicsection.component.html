@@ -1,10 +1,10 @@
 ﻿<!-- Load only one title depending on depth -->
-<h1 *ngIf="depth==0">{{section.title}}</h1>
-<h2 *ngIf="depth==1">{{section.title}}</h2>
-<h3 *ngIf="depth==2">{{section.title}}</h3>
-<h4 *ngIf="depth==3">{{section.title}}</h4>
-<h5 *ngIf="depth==4">{{section.title}}</h5>
-<h6 *ngIf="depth>=5">{{section.title}}</h6>
+<h1 *ngIf="depth==0" [id]="getShortTitle()" class="show-anchor">{{section.title}} <a [routerLink]="[route]" [fragment]="getShortTitle()" class="anchor glyphicon glyphicon-link"></a></h1>
+<h2 *ngIf="depth==1" [id]="getShortTitle()" class="show-anchor">{{section.title}} <a [routerLink]="[route]" [fragment]="getShortTitle()" class="anchor glyphicon glyphicon-link"></a></h2>
+<h3 *ngIf="depth==2" [id]="getShortTitle()" class="show-anchor">{{section.title}} <a [routerLink]="[route]" [fragment]="getShortTitle()" class="anchor glyphicon glyphicon-link"></a></h3>
+<h4 *ngIf="depth==3" [id]="getShortTitle()" class="show-anchor">{{section.title}} <a [routerLink]="[route]" [fragment]="getShortTitle()" class="anchor glyphicon glyphicon-link"></a></h4>
+<h5 *ngIf="depth==4" [id]="getShortTitle()" class="show-anchor">{{section.title}} <a [routerLink]="[route]" [fragment]="getShortTitle()" class="anchor glyphicon glyphicon-link"></a></h5>
+<h6 *ngIf="depth>=5" [id]="getShortTitle()" class="show-anchor">{{section.title}} <a [routerLink]="[route]" [fragment]="getShortTitle()" class="anchor glyphicon glyphicon-link"></a></h6>
 
 <div *ngIf="isDefined(section.description)">
     <div *ngIf="isString(section.description)">
